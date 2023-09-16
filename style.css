@@ -1,0 +1,260 @@
+/* Everytime do this */
+
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&family=Inter&family=Poppins&display=swap');
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: "poppins", "sans-serif";
+
+}
+
+
+/* My wrapper height is my viewport height */
+
+#wrapper {
+
+    height: 100vh;
+
+    /* Y-axis we want scroll */
+
+    overflow-y: auto;
+
+    /* X-axis we dont want scroll */
+
+    overflow-x: hidden;
+
+
+    /* On 3-d effect mean Z-axis mean our eyes
+    or screen distance how far or close
+    
+    */
+
+    perspective: 10px;
+     
+}
+
+/* For hiding a scrollbar */
+
+
+::-webkit-scrollbar{
+
+    display: none;
+}
+
+
+/* Container */
+
+.container {
+
+    /* because we both images overlap
+    with each other
+
+    */
+
+    position: relative;
+
+    height: 100%;
+
+    /* for center or content */
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    /* for 3-D animation use thsi */
+
+    transform-style: preserve-3d;
+
+    /* z-index => It means if our text
+    or image kisi k niche chipp jaaye
+    toh hum usko -1 se bahar laa skte
+    or +1 se andr chuppa skte
+    
+    */
+
+    z-index: -1;
+
+
+
+}
+
+
+
+
+/* images overlap */
+
+.background,
+.foreground {
+
+    position: absolute;
+
+    height: 100%;
+
+    width: 100%;
+
+    /* Another property Object-fit */
+
+    /* It can stretch the image */
+
+    object-fit: cover;
+
+
+    z-index: -1;
+}
+
+
+/* Now we want our background image mean
+mountain image going far mean parallax
+effect
+
+*/
+
+.background {
+
+    /* Now our image is small so
+    we can scale the image mean big
+    
+    */
+
+    transform: translateZ(-40px) scale(5);
+
+
+}
+
+/* Now we give parallax effect in foreground
+image */
+
+.foreground {
+
+    transform: translateZ(-20px) scale(3);
+}
+
+/* Set Text properties */
+
+h1 {
+
+    position: absolute;
+
+    top: 5rem;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    
+
+
+
+    font-size: 10rem;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+
+}
+
+/* start section */
+
+section{
+
+    background-color: rgb(45,45,45);
+    color: white;
+   padding: 5rem 0;
+
+}
+
+/* Secong heading Properties */
+
+.secheading{
+
+    font-size: 5rem;
+    padding: 0 10rem;
+
+}
+
+
+/* Add Paragrapgh Properties */
+
+.text{
+
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+
+}
+
+
+/* Add bg image properties */
+
+.bg{
+
+    position: relative;
+    width: 100%;
+
+    /* for bg image fixed used this */
+
+    background-attachment: fixed;
+
+    /* set the height */
+
+    height: 500px;
+
+    background-size: cover;
+
+    background-position: center;
+
+
+}
+
+
+/* Add text in our bg image */
+
+.desc{
+
+    position: absolute;
+    background-color: white;
+
+    padding: 0.5rem 2.5rem;
+    top: 50%;
+    left: 50%;
+
+    transform: translateX(-50%) translateY(-50%);
+
+    color: black;
+
+    font-size: 3.5rem;
+
+    font-weight: 600;
+    
+}
+
+
+/* Lets add bg image */
+
+.bg1{
+
+    background-image: url(./sport-1.jpg);
+    
+
+}
+.bg2{
+
+    background-image: url(./sport-2.webp);
+
+
+}
+.bg3{
+
+    background-image: url(./sports-3.jpg);
+
+
+}
